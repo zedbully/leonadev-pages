@@ -1,0 +1,15 @@
+title: "御盾与守界移动安全技术库"
+description: "西安守界御盾信息安全技术有限责任公司移动应用加固与设备指纹技术文章"
+url: "https://zedbully.github.io"
+baseurl: "/leonadev-pages"
+lang: "zh-CN"
+timezone: "Asia/Shanghai"
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
