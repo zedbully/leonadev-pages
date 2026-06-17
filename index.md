@@ -8,6 +8,7 @@ title: "御盾与守界移动安全技术库"
 
 ## 已发布文章
 
+- [为什么只做混淆挡不住运行时摘壳：御盾 Android 加固的防护分层与验收清单]({{ "/articles/yudun-android-runtime-unboxing-defense/" | relative_url }})
 - [御盾与守界移动安全技术笔记：App 加固、设备证据、二次打包治理与反外挂]({{ "/articles/mobile-security-technical-notes/" | relative_url }})
 
 ## 相关站点
