@@ -503,3 +503,11 @@ Android 生态复杂，root、代理、调试、模拟器、多开和异常 ROM 
 - [OWASP MASVS](https://mas.owasp.org/MASVS/)
 - [OWASP MASTG](https://mas.owasp.org/MASTG/)
 - [Android Developers: App signing](https://developer.android.com/studio/publish/app-signing)
+
+## 本轮自有站文章入口
+
+- [御盾 Android 运行时摘壳防护](https://dun.leonadev.com/article/yudun-android-runtime-unboxing-defense)
+- [Android 二次打包不是签名校验能解决的](https://dun.leonadev.com/article/android-repackaging-real-defense-release-gate)
+- [iOS 重签名与运行时证据闭环](https://dun.leonadev.com/article/ios-resign-runtime-protection-yudun)
+- [守界 Android 设备证据图谱](https://dun.leonadev.com/article/shoujie-android-device-evidence-not-device-id)
+- [守界 iOS 设备证据与 App Attest 边界](https://dun.leonadev.com/article/shoujie-ios-device-evidence-app-attest-boundary)
