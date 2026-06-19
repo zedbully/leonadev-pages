@@ -8,6 +8,7 @@ title: "御盾与守界移动安全技术库"
 
 ## 已发布文章
 
+- [2026-06-19 21:00 移动安全运行证据内容包]({{ "/articles/2026-06-19-2100-mobile-security-runtime-evidence/" | relative_url }})
 - [2026-06-19 09:00 移动安全发布证据内容包]({{ "/articles/2026-06-19-0900-mobile-security-release-evidence/" | relative_url }})
 - [2026-06-18 21:00 移动安全证据运维内容包]({{ "/articles/2026-06-18-2100-mobile-security-evidence-ops/" | relative_url }})
 - [2026-06-18 09:00 移动安全本地证据内容包]({{ "/articles/2026-06-18-0900-mobile-security-local-evidence/" | relative_url }})
@@ -17,11 +18,11 @@ title: "御盾与守界移动安全技术库"
 
 ## 本轮自有站专题
 
-- [只验签为什么挡不住二次打包：Android 包 lineage 必须接上运行时证据](https://dun.leonadev.com/article/android-repackaging-package-lineage-runtime-evidence-gate)
-- [主 App 能启动不代表扩展安全：iOS Framework、Extension 和 App Clip 怎么做独立门禁？](https://dun.leonadev.com/article/ios-embedded-targets-extension-appclip-release-gate)
-- [没有 GMS 也不能假通过：大陆 Android attestation fallback 怎么分层？](https://dun.leonadev.com/article/android-mainland-attestation-fallback-evidence-gate)
-- [Bootloader 解锁不是封禁理由：Android ROM 证据为什么要和 Root/模拟器拆开？](https://dun.leonadev.com/article/android-rom-bootloader-evidence-not-policy)
-- [App Attest 接上了也不能在客户端判定：iOS 私有 verifier 为什么必须留在后端？](https://dun.leonadev.com/article/ios-appattest-private-verifier-release-gate)
+- [别把三条 SHA 拼成一个通过：Android 签名模式门禁为什么必须 SameSHA 闭合？](https://dun.leonadev.com/article/android-signmode-samesha-release-gate-no-cross-sha-pass)
+- [函数加密不是把字节藏起来：iOS Mach-O materialization 为什么要先 fail-closed？](https://dun.leonadev.com/article/ios-macho-function-materialization-fail-closed-gate)
+- [Root、Magisk、VPN、多开别塞进一个标签：Android 设备证据图谱该怎么拆？](https://dun.leonadev.com/article/android-root-magisk-vpn-clone-mount-evidence-graph)
+- [没有 GMS 时最怕“假通过”：Android OEM attestation fallback 应该怎么验收？](https://dun.leonadev.com/article/android-non-gms-attestation-fallback-not-pass)
+- [iOS 设备指纹不要做成本地风控开关：App Attest、越狱证据和 BoxId 如何进同一 envelope？](https://dun.leonadev.com/article/ios-evidence-envelope-appattest-verifier-boundary)
 
 ## 相关站点
 
