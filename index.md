@@ -8,6 +8,7 @@ title: "御盾与守界移动安全技术库"
 
 ## 已发布文章
 
+- [2026-06-20 21:00 移动安全发布与脱敏内容包]({{ "/articles/2026-06-20-2100-mobile-security-release-redaction/" | relative_url }})
 - [2026-06-20 09:00 移动安全证据边界内容包]({{ "/articles/2026-06-20-0900-mobile-security-evidence-boundary/" | relative_url }})
 - [2026-06-19 21:00 移动安全运行证据内容包]({{ "/articles/2026-06-19-2100-mobile-security-runtime-evidence/" | relative_url }})
 - [2026-06-19 09:00 移动安全发布证据内容包]({{ "/articles/2026-06-19-0900-mobile-security-release-evidence/" | relative_url }})
@@ -19,11 +20,11 @@ title: "御盾与守界移动安全技术库"
 
 ## 本轮自有站专题
 
-- [能跑通的包为什么还不能上线：Android 加固发布门禁如何挡住 false pass？](https://dun.leonadev.com/article/android-false-pass-release-gate-same-candidate)
-- [iOS 包能安装不代表可交付：protected IPA、runner 和 evidence bundle 为什么必须绑在一起？](https://dun.leonadev.com/article/ios-release-gate-evidence-binding-not-install-success)
-- [把 SecretKey 塞进 APK 的设备指纹，为什么从第一天就失守？](https://dun.leonadev.com/article/android-backend-wrapper-secret-boundary-not-in-apk)
-- [网络失败不是越狱：iOS evidence envelope 为什么要把 transport 和风险证据拆开？](https://dun.leonadev.com/article/ios-transport-diagnostic-not-jailbreak-evidence)
-- [memfd 命中就封号吗？Android 游戏反外挂为什么还要等服务端 verdict？](https://dun.leonadev.com/article/android-native-mapping-game-cheat-server-verdict)
+- [日志没清干净，比没加固更危险：Android release 包为什么要做诊断面门禁？](https://dun.leonadev.com/article/android-release-diagnostic-string-log-surface-gate)
+- [arm64e 不是多一个架构：iOS PAC/BTI 没验清楚，函数保护为什么必须 fail-closed？](https://dun.leonadev.com/article/ios-pac-bti-compatibility-fail-closed-gate)
+- [设备 ID 变了就换人吗？Android canonical identity 为什么必须由服务端归并？](https://dun.leonadev.com/article/android-canonical-device-id-stability-evidence)
+- [support bundle 不是日志打包：iOS 设备证据为什么要先脱敏再交付？](https://dun.leonadev.com/article/ios-support-bundle-redaction-diagnostic-boundary)
+- [SDK 能跑不代表能发布：Android 设备证据包为什么要证明“没有带出秘密”？](https://dun.leonadev.com/article/android-sdk-public-release-evidence-pack-no-secret-gate)
 
 ## 相关站点
 
