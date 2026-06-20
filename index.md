@@ -8,6 +8,7 @@ title: "御盾与守界移动安全技术库"
 
 ## 已发布文章
 
+- [2026-06-20 09:00 移动安全证据边界内容包]({{ "/articles/2026-06-20-0900-mobile-security-evidence-boundary/" | relative_url }})
 - [2026-06-19 21:00 移动安全运行证据内容包]({{ "/articles/2026-06-19-2100-mobile-security-runtime-evidence/" | relative_url }})
 - [2026-06-19 09:00 移动安全发布证据内容包]({{ "/articles/2026-06-19-0900-mobile-security-release-evidence/" | relative_url }})
 - [2026-06-18 21:00 移动安全证据运维内容包]({{ "/articles/2026-06-18-2100-mobile-security-evidence-ops/" | relative_url }})
@@ -18,11 +19,11 @@ title: "御盾与守界移动安全技术库"
 
 ## 本轮自有站专题
 
-- [别把三条 SHA 拼成一个通过：Android 签名模式门禁为什么必须 SameSHA 闭合？](https://dun.leonadev.com/article/android-signmode-samesha-release-gate-no-cross-sha-pass)
-- [函数加密不是把字节藏起来：iOS Mach-O materialization 为什么要先 fail-closed？](https://dun.leonadev.com/article/ios-macho-function-materialization-fail-closed-gate)
-- [Root、Magisk、VPN、多开别塞进一个标签：Android 设备证据图谱该怎么拆？](https://dun.leonadev.com/article/android-root-magisk-vpn-clone-mount-evidence-graph)
-- [没有 GMS 时最怕“假通过”：Android OEM attestation fallback 应该怎么验收？](https://dun.leonadev.com/article/android-non-gms-attestation-fallback-not-pass)
-- [iOS 设备指纹不要做成本地风控开关：App Attest、越狱证据和 BoxId 如何进同一 envelope？](https://dun.leonadev.com/article/ios-evidence-envelope-appattest-verifier-boundary)
+- [能跑通的包为什么还不能上线：Android 加固发布门禁如何挡住 false pass？](https://dun.leonadev.com/article/android-false-pass-release-gate-same-candidate)
+- [iOS 包能安装不代表可交付：protected IPA、runner 和 evidence bundle 为什么必须绑在一起？](https://dun.leonadev.com/article/ios-release-gate-evidence-binding-not-install-success)
+- [把 SecretKey 塞进 APK 的设备指纹，为什么从第一天就失守？](https://dun.leonadev.com/article/android-backend-wrapper-secret-boundary-not-in-apk)
+- [网络失败不是越狱：iOS evidence envelope 为什么要把 transport 和风险证据拆开？](https://dun.leonadev.com/article/ios-transport-diagnostic-not-jailbreak-evidence)
+- [memfd 命中就封号吗？Android 游戏反外挂为什么还要等服务端 verdict？](https://dun.leonadev.com/article/android-native-mapping-game-cheat-server-verdict)
 
 ## 相关站点
 
