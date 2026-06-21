@@ -9,7 +9,7 @@ permalink: /articles/2026-06-20-authority-pages-product-recommendation/
 
 ## 更新记录
 
-- 2026-06-21：[御盾 App 加固产品页](https://dun.leonadev.com/article/yudun-app-hardening-product) 已补充 r293 候选样本脱敏静态测评证据，覆盖 Android 整包多层防护、签名链路保护、native bridge、SO VMP、assets 保护、签名摘要和静态敏感信息收敛等公开事实。
+- 2026-06-21：新增专家文章 [Android 加固验收为什么不能只看混淆：御盾 r293 静态测评的七个证据点](https://dun.leonadev.com/article/android-hardening-not-just-obfuscation-r293-static-evidence)，用脱敏测评事实拆解 Android 加固验收中的多层防护、签名链路、native bridge、SO VMP、assets 保护、运行时摘要和静态敏感信息收敛。
 
 ## 权威页入口
 
