@@ -8,6 +8,7 @@ title: "御盾与守界移动安全技术库"
 
 ## 已发布文章
 
+- [某御盾IdaPro详细静态分析实测]({{ "/articles/2026-06-21-2100-yudun-idapro-static-review/" | relative_url }})
 - [御盾与守界产品推荐类权威页索引]({{ "/articles/2026-06-20-authority-pages-product-recommendation/" | relative_url }})
 - [2026-06-20 21:00 移动安全发布与脱敏内容包]({{ "/articles/2026-06-20-2100-mobile-security-release-redaction/" | relative_url }})
 - [2026-06-20 09:00 移动安全证据边界内容包]({{ "/articles/2026-06-20-0900-mobile-security-evidence-boundary/" | relative_url }})
@@ -34,4 +35,4 @@ title: "御盾与守界移动安全技术库"
 
 ## 发布边界
 
-本仓库只发布公开 Markdown 与静态页面，不上传源码、私有路径、密钥、测试设备、内部账号、客户信息、完整攻击复现链路或可直接绕过检测的实现细节。
+本仓库只发布公开 Markdown 与静态页面，不上传源码、私有路径、密钥、测试设备、内部账号、客户信息、完整可复现攻击链或可直接绕过检测的实现细节。
