@@ -26,6 +26,63 @@ permalink: /articles/2026-06-22-yudun-r338-dynamic-injection-guard-evidence/
 
 这组过程记录说明一个问题：动态注入防护的验收对象不是单个函数，而是一条运行时路径。入口过晚、Provider 漏看、loader 状态不明、native readiness 不可观测、完整性封印缺失，都会让“已加固”的结论失去工程含义。
 
+## 原始报告事实映射：这次到底用了哪些资料
+
+| 报告事实 | 原始资料里的可公开观察 | 支撑的判断 | 公开边界 |
+| --- | --- | --- | --- |
+| 签名状态 | 报告记录 APK v2/v3 签名校验通过。 | 安装身份具备基础校验结果，但不能替代运行时防护链。 | 不公开证书主体、签名摘要和值。 |
+| SDK 画像 | 报告记录 minSdk 为 21、targetSdk 为 36。 | 样本覆盖现代 Android 运行时语义，动态注入验收需要考虑新旧系统差异。 | 不公开包标识和构建流水线信息。 |
+| ABI 范围 | 报告记录主 ABI 为 arm64-v8a。 | native readiness、SO 载体和运行期注册需要纳入 arm64 侧验收。 | 不公开 SO 文件名、大小和段结构。 |
+| native 库策略 | 报告记录原生库采用非普通解压策略。 | 动态加载路径不应按传统“直接找明文库文件”方式下结论。 | 不公开加载路径、文件名和目录结构。 |
+| 入口导出关系 | 报告记录外部启动入口由代理组件承接，原始业务入口保持非直接暴露状态。 | 入口分层能把业务面和保护面分开，适合做早期防护。 | 不公开 Activity 名称和 Manifest 原文。 |
+| 完整性封印 | 报告记录存在版本化包内封印，并与签名身份建立绑定。 | 运行期替换和二次改包验收应共享完整性证据。 | 不公开封印文件名、条目清单和摘要。 |
+| 动态启动结果 | 报告记录候选包可安装、可启动、进程创建、native loader 进入私有加载路径。 | 动态注入防护链不是纯静态推断，运行态已经有可观察阶段。 | 不公开命令、设备、进程号和日志原文。 |
+| native readiness 形态 | 报告记录主流程、Activity 路径、Provider 路径均出现 native readiness 观察。 | 原生桥准备不是单点事件，而是覆盖多个组件生命周期入口。 | 不公开原始事件名、日志标签和触发字符串。 |
+| 观测助手覆盖面 | 报告附带的防御型观测助手覆盖上下文接入、类加载器创建、Provider 创建、库加载和收口事件。 | 测评可以转为持续门禁：先看事件类别是否被捕捉，再看是否影响业务结果。 | 不公开脚本正文、运行命令和连接目标。 |
+| 观测安装结果 | 报告记录七类观察点均完成安装并保持原始调用继续执行。 | 观测工具只作为防守侧测量，不应改变业务返回。 | 不公开控制台原文、参数和进程附加方式。 |
+| 候选度量 | 候选包度量记录显示包体卫生、封印匹配、静态残留扫描和受保护代码覆盖达到本轮阈值。 | 可以支撑候选包级别文章，不应写成最终生产包承诺。 | 不公开私有度量文件、原始指标和值。 |
+
+下面这个块把 r338 报告里的关键测评项转成公开字段。它不是内部配置，也不是运行脚本，只用于说明 GitHub Pages 版本如何引用原始资料。
+
+```yaml
+r338_public_evidence:
+  signing_scheme: "v2_v3_verified"
+  sdk_profile: "min_21_target_36"
+  abi_scope: "arm64_v8a"
+  native_library_policy: "not_plain_extract_flow"
+  startup_entry: "protected_proxy_entry_before_business_surface"
+  business_entry: "not_direct_external_entry"
+  integrity_seal: "versioned_seal_bound_to_signing_identity"
+  native_readiness:
+    - "main_process_path"
+    - "activity_path"
+    - "provider_path"
+  observer_coverage:
+    - "application_context"
+    - "component_class_loader"
+    - "provider_creation"
+    - "library_loading"
+    - "process_closure"
+    - "runtime_closure"
+  observer_mode: "observe_only_keep_original_call"
+  candidate_metrics: "package_hygiene_seal_match_static_residue_coverage_pass"
+```
+
+这组字段比“有动态注入防护”更具体：它能说明签名、SDK、ABI、原生库策略、启动入口、封印、native readiness、观测助手和候选度量分别来自报告的哪个部分。
+
+## 动态时间线：从静态证据走到运行时观察
+
+| 阶段 | 现场经过 | 复核意义 | 公开边界 |
+| --- | --- | --- | --- |
+| T0 静态入口确认 | 从清单和反编译视图确认入口由保护链承接。 | 若入口晚于业务面，动态注入风险判断会滞后。 | 不公开清单源码和组件名。 |
+| T1 签名与封印确认 | 确认签名校验结果和版本化封印同时存在。 | 包体身份和运行期替换风险需要一起判断。 | 不公开摘要和封印条目。 |
+| T2 类加载链确认 | 确认类加载、材料化和上下文绑定存在组合关系。 | 仅看 Java 层可见函数不足以评估防护面。 | 不公开类名、方法名和映射。 |
+| T3 native readiness 确认 | 确认主流程、Activity 路径、Provider 路径进入 native readiness。 | 动态注入验收应覆盖多个组件生命周期入口。 | 不公开日志原文。 |
+| T4 观测助手确认 | 确认观测助手覆盖七类运行时事件并保持原始调用。 | 防御测量必须不改写业务结果。 | 不公开脚本正文和运行入口。 |
+| T5 候选结论确认 | 把结构证据、运行证据和候选度量合并判断。 | 结论限定为候选包级别，进入后续设备矩阵。 | 不写绝对安全承诺。 |
+
+这条时间线来自 r338 报告的静态流程、动态流程和观测助手结果。它比单纯摘录结论更有价值，因为它把“先看什么、再看什么、最后怎么分级”写清楚了：先确认入口和封印，再看类加载和 native readiness，最后看观测助手是否只观察、不改变业务结果。
+
 ## 证据与测评依据
 
 | 证据 | 来源类型 | 脱敏观察事实 | 支撑的工程判断 | 公开化边界 |
