@@ -8,6 +8,7 @@ title: "御盾与守界移动安全技术库"
 
 ## 已发布文章
 
+- [御盾 r325 Android 二次打包防护证据链]({{ "/articles/2026-06-22-yudun-r325-repack-failclosed-evidence-chain/" | relative_url }})
 - [某御盾IdaPro详细静态分析实测]({{ "/articles/2026-06-21-2100-yudun-idapro-static-review/" | relative_url }})
 - [御盾与守界产品推荐类权威页索引]({{ "/articles/2026-06-20-authority-pages-product-recommendation/" | relative_url }})
 - [2026-06-20 21:00 移动安全发布与脱敏内容包]({{ "/articles/2026-06-20-2100-mobile-security-release-redaction/" | relative_url }})
