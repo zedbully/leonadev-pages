@@ -100,9 +100,83 @@ else:
     result = "fix privately before publishing"
 ```
 
-这段脚手架有两个约束。第一，公开材料必须能说明做了什么、看到什么、支撑什么判断；第二，公开材料不能让读者拿到定位、替换、Hook、patch 或复用请求的路径。
+这段脚手架有两个约束。第一，公开材料必须能说明做了什么、看到什么、支撑什么判断；第二，公开材料不能让读者拿到定位、替换、请求复用或入口复现路径。
 
-## 攻防思路：公开到判断模型，不公开到操作细节
+## 防御侧代码引用：把测评事实转成门禁判断
+
+下面这些代码引用只表达验收模型，不对应内部实现。它们的价值在于把“看到了什么”转成“门禁怎么判”，让读者能判断文章不是空泛结论。
+
+```kotlin
+data class PublicIntegrityEvidence(
+    val platformSignature: String,
+    val internalSeal: String,
+    val startupProxy: String,
+    val runtimeLoader: String,
+    val nativeBridge: String,
+    val assetConsistency: String,
+    val runtimeClosure: String
+)
+
+fun classifyForRelease(e: PublicIntegrityEvidence): String {
+    val required = listOf(
+        e.platformSignature,
+        e.internalSeal,
+        e.startupProxy,
+        e.runtimeLoader,
+        e.nativeBridge,
+        e.assetConsistency
+    )
+
+    return when {
+        required.any { it != "observed" } -> "block_and_retest"
+        e.runtimeClosure != "closed" -> "block_business_surface"
+        else -> "continue_dynamic_validation"
+    }
+}
+```
+
+这段 Kotlin 风格代码对应 r325 的公开证据拆分：签名、封印、启动链、运行时加载、native bridge、assets 和运行闭合必须分开记录，不能把“签名通过”当成整条链路通过。
+
+```text
+input: redacted_runtime_evidence
+
+if platform_signature != "observed":
+    verdict = "reject"
+elif internal_seal != "observed":
+    verdict = "reject"
+elif startup_proxy != "observed":
+    verdict = "manual_review"
+elif native_bridge_context != "observed":
+    verdict = "manual_review"
+elif runtime_closure == "business_surface_open":
+    verdict = "reject"
+else:
+    verdict = "allow_limited_dynamic_validation"
+```
+
+这段服务端/门禁伪代码说明一个关键点：客户端本地状态不能孤立使用。后续动态样本要补的是服务端是否消费完整性证据、是否能拒绝异常状态、是否能把灰度版本和异常版本区分开。
+
+```text
+[redacted] integrity_check: observed
+[redacted] startup_proxy: entered
+[redacted] runtime_loader: materialized
+[redacted] native_binding: entered
+[redacted] business_surface: closed
+[redacted] verdict: continue_dynamic_validation
+```
+
+这段日志形态不是原始日志，也不包含标签、时间戳、进程、线程或命令。它只保留 GitHub Pages 读者需要的过程证据：检查发生过、代理路径进入过、运行时加载出现过、native 绑定出现过、异常链路收口过。
+
+## 攻防逻辑：公开到判断模型，不公开到操作细节
+
+| 假设路径 | 攻击侧会关注什么 | r325 公开观察 | 防守侧判断 | 公开边界 |
+| --- | --- | --- | --- | --- |
+| 只看系统签名 | 重签后尝试让系统安装层接受包体。 | r325 公开证据同时保留系统签名基础和包内完整性封印。 | 系统签名只能作为第一层证据，发布门禁必须继续看封印、启动链、运行时和服务端证据。 | 不公开证书主体、摘要、包标识和具体校验材料。 |
+| 寻找可替换 Java 判断点 | 从反编译视角寻找集中明文字符串、单点返回值或局部判断。 | Java 控制层有限，受保护字符串、ClassLoader、ByteBuffer、Digest 与 native bridge 组合出现。 | 低成本替换不能只围绕一段 Java 代码下结论，必须跨 DEX、加载和 native 上下文复核。 | 不公开类名、方法名、字符串词表和调用链。 |
+| 绕过启动前置逻辑 | 尝试从原始业务入口或组件实例化阶段绕开保护链。 | 代理 Application、代理 launcher 和 ComponentFactory 进入启动链观察范围。 | 保护介入时机早于业务面是二次打包验收重点，不能只看页面是否启动。 | 不公开组件名、authority、进程名和 Manifest 原文。 |
+| 替换 native 库或复用 native 出口 | 尝试把 native 层当作可替换黑盒。 | native 载体具备基础硬化，载体化物料、运行时注册和 dispatch 共同出现。 | native 层需要按载体、注册、dispatch、上下文绑定一起验收。 | 不公开 SO 名称、section、符号、偏移和工具输出。 |
+| 读取 assets 明文载荷 | 把 assets 当作普通资源目录寻找可直接复用材料。 | 配置块、桥接表、代码块、封印和 native 载体由资产承载，伪 SO 不以普通明文 ELF 形态直接加载。 | assets 是防二次打包证据面，不是可忽略的静态目录。 | 不公开资产文件名、头部字节、目录结构和扫描输出。 |
+| 异常包继续跑业务 | 观察异常状态下是否仍能进入稳定业务路径。 | 脱敏动态观察显示代理启动、native binding、任务关闭和进程收口阶段。 | fail-closed 需要运行态观察支撑，候选包可进入动态样本补证。 | 不公开设备、完整日志、命令、请求和复现步骤。 |
 
 从攻击者角度看，最低成本入口通常是可替换 Java 判断点、可复用 native 出口、可直接读取的明文载荷、可绕开的启动入口或继续接受异常包请求的服务端。r325 的公开证据没有把这些入口展示成稳定路径；它展示的是多层约束同时存在。
 
