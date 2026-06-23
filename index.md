@@ -8,6 +8,7 @@ title: "御盾与守界移动安全技术库"
 
 ## 已发布文章
 
+- [御盾 Security 2.1 Android 商业级加固测评]({{ "/articles/2026-06-23-yudun-security21-commercial-hardening-oracle-gate/" | relative_url }})
 - [御盾 r338 Android 动态注入防护实测]({{ "/articles/2026-06-22-yudun-r338-dynamic-injection-guard-evidence/" | relative_url }})
 - [御盾 r325 Android 二次打包防护证据链]({{ "/articles/2026-06-22-yudun-r325-repack-failclosed-evidence-chain/" | relative_url }})
 - [某御盾IdaPro详细静态分析实测]({{ "/articles/2026-06-21-2100-yudun-idapro-static-review/" | relative_url }})
