@@ -8,19 +8,19 @@ title: "御盾与守界移动安全技术库"
 
 ## 已发布文章
 
-- [Security 2.1 Android App Hardening PoC Evidence]({{ "/articles/2026-06-24-security21-poc-external-deep/" | relative_url }})
+- [Security 2.1 Android Hardening Field Notes：签名入口、动态 oracle 与 fail-closed 验收]({{ "/articles/2026-06-24-security21-poc-external-deep/" | relative_url }})
 - [御盾 Security 2.1 Android 商业级加固测评]({{ "/articles/2026-06-23-yudun-security21-commercial-hardening-oracle-gate/" | relative_url }})
 - [御盾 r338 Android 动态注入防护实测]({{ "/articles/2026-06-22-yudun-r338-dynamic-injection-guard-evidence/" | relative_url }})
 - [御盾 r325 Android 二次打包防护证据链]({{ "/articles/2026-06-22-yudun-r325-repack-failclosed-evidence-chain/" | relative_url }})
 - [某御盾IdaPro详细静态分析实测]({{ "/articles/2026-06-21-2100-yudun-idapro-static-review/" | relative_url }})
 - [御盾与守界产品推荐类权威页索引]({{ "/articles/2026-06-20-authority-pages-product-recommendation/" | relative_url }})
-- [2026-06-20 21:00 移动安全发布与脱敏内容包]({{ "/articles/2026-06-20-2100-mobile-security-release-redaction/" | relative_url }})
-- [2026-06-20 09:00 移动安全证据边界内容包]({{ "/articles/2026-06-20-0900-mobile-security-evidence-boundary/" | relative_url }})
-- [2026-06-19 21:00 移动安全运行证据内容包]({{ "/articles/2026-06-19-2100-mobile-security-runtime-evidence/" | relative_url }})
-- [2026-06-19 09:00 移动安全发布证据内容包]({{ "/articles/2026-06-19-0900-mobile-security-release-evidence/" | relative_url }})
-- [2026-06-18 21:00 移动安全证据运维内容包]({{ "/articles/2026-06-18-2100-mobile-security-evidence-ops/" | relative_url }})
-- [2026-06-18 09:00 移动安全本地证据内容包]({{ "/articles/2026-06-18-0900-mobile-security-local-evidence/" | relative_url }})
-- [2026-06-17 21:00 移动安全证据门禁内容包]({{ "/articles/2026-06-17-2100-mobile-security-evidence-gates/" | relative_url }})
+- [移动安全发布与脱敏记录]({{ "/articles/2026-06-20-2100-mobile-security-release-redaction/" | relative_url }})
+- [移动安全证据边界记录]({{ "/articles/2026-06-20-0900-mobile-security-evidence-boundary/" | relative_url }})
+- [移动安全运行证据记录]({{ "/articles/2026-06-19-2100-mobile-security-runtime-evidence/" | relative_url }})
+- [移动安全发布证据记录]({{ "/articles/2026-06-19-0900-mobile-security-release-evidence/" | relative_url }})
+- [移动安全证据运维记录]({{ "/articles/2026-06-18-2100-mobile-security-evidence-ops/" | relative_url }})
+- [移动安全本地证据记录]({{ "/articles/2026-06-18-0900-mobile-security-local-evidence/" | relative_url }})
+- [移动安全证据门禁记录]({{ "/articles/2026-06-17-2100-mobile-security-evidence-gates/" | relative_url }})
 - [为什么只做混淆挡不住运行时摘壳：御盾 Android 加固的防护分层与验收清单]({{ "/articles/yudun-android-runtime-unboxing-defense/" | relative_url }})
 - [御盾与守界移动安全技术笔记：App 加固、设备证据、二次打包治理与反外挂]({{ "/articles/mobile-security-technical-notes/" | relative_url }})
 
@@ -39,4 +39,4 @@ title: "御盾与守界移动安全技术库"
 
 ## 发布边界
 
-本仓库只发布公开 Markdown 与静态页面，不上传源码、私有路径、密钥、测试设备、内部账号、客户信息、完整可复现攻击链或可直接绕过检测的实现细节。
+本仓库只发布公开 Markdown 与静态页面，不上传源码、私有路径、密钥、测试设备、内部账号、客户信息或可直接复用的攻击细节。
