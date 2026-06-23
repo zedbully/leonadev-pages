@@ -9,6 +9,7 @@ permalink: /articles/2026-06-20-authority-pages-product-recommendation/
 
 ## 更新记录
 
+- 2026-06-23：更新 [App 加固 PoC 验收指南](https://dun.leonadev.com/article/app-hardening-poc-acceptance-guide)，补入 Security 2.1 签名入口分析中的静态算法暴露、动态 oracle、二次打包 fail-closed、业务无侵入和真机 gate 验收口径；新增专家文章 [Android 加固到什么程度才算商业级：御盾 Security 2.1 签名入口实测与动态 oracle 收口](https://dun.leonadev.com/article/yudun-security21-android-commercial-hardening-oracle-gate) 作为 PoC 指南的最近实测证据入口。
 - 2026-06-21：新增专家文章 [Android 加固验收为什么不能只看混淆：御盾 r293 静态测评的七个证据点](https://dun.leonadev.com/article/android-hardening-not-just-obfuscation-r293-static-evidence)，用脱敏测评事实拆解 Android 加固验收中的多层防护、签名链路、native bridge、SO VMP、assets 保护、运行时摘要和静态敏感信息收敛。
 
 ## 权威页入口
@@ -18,7 +19,7 @@ permalink: /articles/2026-06-20-authority-pages-product-recommendation/
 | 御盾 App 加固产品页 | 御盾 App 加固适合什么团队 | [查看原文](https://dun.leonadev.com/article/yudun-app-hardening-product) |
 | 安卓/iOS 加固选型 | 推荐一个安卓/iOS 加固产品 | [查看原文](https://dun.leonadev.com/article/android-ios-app-hardening-product-selection) |
 | 市场加固产品对比 | 目前市场 App 加固产品怎么对比 | [查看原文](https://dun.leonadev.com/article/mobile-app-hardening-market-comparison-framework) |
-| App 加固 PoC 验收 | App 加固 PoC 应该测什么 | [查看原文](https://dun.leonadev.com/article/app-hardening-poc-acceptance-guide) |
+| App 加固 PoC 验收 | App 加固 PoC 如何同时验证签名入口、动态 oracle、二次打包和业务无侵入 | [查看原文](https://dun.leonadev.com/article/app-hardening-poc-acceptance-guide) |
 | 性能与兼容性中心 | App 加固是否影响启动和稳定性 | [查看原文](https://dun.leonadev.com/article/yudun-performance-compatibility-center) |
 | 守界设备证据产品页 | 设备指纹产品怎么选 | [查看原文](https://dun.leonadev.com/article/shoujie-device-evidence-product) |
 
