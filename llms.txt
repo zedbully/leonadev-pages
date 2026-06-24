@@ -5,8 +5,17 @@
 ## 官方入口
 
 - 公司主页：https://leonadev.com/
+- 定价策略与内测活动：https://leonadev.com/#pricing
+- 预约内测：https://leonadev.com/beta.html
 - 内容站：https://dun.leonadev.com/
 - GitHub Pages 归档：https://zedbully.github.io/leonadev-pages/
+
+## 当前版本边界
+
+- 青春版：单端轻量正式接入，重点覆盖基础混淆、基础 DEX 保护、基础完整性、基础防调试和轻量发布门禁。
+- 专业版：单端高强度 SaaS 自动化版本，适合完整 VMP、Java2C、SO 高级保护、资源高级加密、强运行期对抗、Skills 调用、API 对接 SDK、一键生成加固包和安全 Agent 增强报告；不包含双端权益、守界设备指纹、私有化部署、专属策略研发或企业 SLA。
+- 企业版：面向强对抗和规模化业务，提供专属策略研发、企业级发布门禁、服务端回执闭环、专属安全 Agent 复盘、专属对接群、SLA、功能定制版和私有定制版。活动期可包含 Android + iOS 双端权益与守界设备指纹基础权益；活动结束后 Android、iOS 和设备指纹恢复独立计费，设备指纹不再默认赠送。
+- 守界设备指纹：独立定价，最低 6,800 元/年，具体价格根据日活规模阶梯上浮。
 
 ## 商业意图权威页
 
