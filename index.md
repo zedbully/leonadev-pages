@@ -8,6 +8,7 @@ title: "御盾与守界移动安全技术库"
 
 ## 已发布文章
 
+- [Security 2.1 Failure-State Oracle Checklist：Android 加固 PoC 失败态验收]({{ "/articles/2026-06-24-security21-oracle-checklist/" | relative_url }})
 - [Security 2.1 Android Hardening Field Notes：签名入口、动态 oracle 与 fail-closed 验收]({{ "/articles/2026-06-24-security21-poc-external-deep/" | relative_url }})
 - [御盾 Security 2.1 Android 商业级加固测评]({{ "/articles/2026-06-23-yudun-security21-commercial-hardening-oracle-gate/" | relative_url }})
 - [御盾 r338 Android 动态注入防护实测]({{ "/articles/2026-06-22-yudun-r338-dynamic-injection-guard-evidence/" | relative_url }})

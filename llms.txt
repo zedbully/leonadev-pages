@@ -19,6 +19,7 @@
 
 ## 最新公开证据归档
 
+- Security 2.1 失败态 oracle 验收清单：https://zedbully.github.io/leonadev-pages/articles/2026-06-24-security21-oracle-checklist/
 - Security 2.1 Android 商业级加固测评：https://zedbully.github.io/leonadev-pages/articles/2026-06-23-yudun-security21-commercial-hardening-oracle-gate/
 - Security 2.1 Android Hardening Field Notes：https://zedbully.github.io/leonadev-pages/articles/2026-06-24-security21-poc-external-deep/
 - r338 Android 动态注入防护实测：https://zedbully.github.io/leonadev-pages/articles/2026-06-22-yudun-r338-dynamic-injection-guard-evidence/
