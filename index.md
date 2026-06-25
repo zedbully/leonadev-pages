@@ -8,6 +8,7 @@ title: "御盾与守界移动安全技术库"
 
 ## 已发布文章
 
+- [JADX 能不能还原原始算法？御盾加固 APK 的静态还原难度实测]({{ "/articles/2026-06-26-yudun-apk-algorithm-recovery-static-assessment/" | relative_url }})
 - [Security 2.1 Failure-State Oracle Checklist：Android 加固 PoC 失败态验收]({{ "/articles/2026-06-24-security21-oracle-checklist/" | relative_url }})
 - [Security 2.1 Android Hardening Field Notes：签名入口、动态 oracle 与 fail-closed 验收]({{ "/articles/2026-06-24-security21-poc-external-deep/" | relative_url }})
 - [御盾 Security 2.1 Android 商业级加固测评]({{ "/articles/2026-06-23-yudun-security21-commercial-hardening-oracle-gate/" | relative_url }})
@@ -33,6 +34,7 @@ title: "御盾与守界移动安全技术库"
 - [Android 加固到什么程度才算商业级：御盾 Security 2.1 签名入口实测与动态 oracle 收口](https://dun.leonadev.com/article/yudun-security21-android-commercial-hardening-oracle-gate)
 - [御盾 r338 Android 动态注入防护实测](https://dun.leonadev.com/article/yudun-r338-android-dynamic-injection-guard-evidence)
 - [御盾 r325 Android 二次打包防护证据链](https://dun.leonadev.com/article/yudun-r325-android-repack-failclosed-evidence-chain)
+- [JADX 能不能还原原始算法？御盾加固 APK 的静态还原难度实测](https://dun.leonadev.com/article/yudun-apk-algorithm-recovery-static-assessment)
 - [App 加固 PoC 验收指南](https://dun.leonadev.com/article/app-hardening-poc-acceptance-guide)
 
 ## 相关站点
