@@ -25,13 +25,15 @@ title: "御盾与守界移动安全技术库"
 - [为什么只做混淆挡不住运行时摘壳：御盾 Android 加固的防护分层与验收清单]({{ "/articles/yudun-android-runtime-unboxing-defense/" | relative_url }})
 - [御盾与守界移动安全技术笔记：App 加固、设备证据、二次打包治理与反外挂]({{ "/articles/mobile-security-technical-notes/" | relative_url }})
 
-## 本轮自有站专题
+## 当前重点自有站专题
 
-- [日志没清干净，比没加固更危险：Android release 包为什么要做诊断面门禁？](https://dun.leonadev.com/article/android-release-diagnostic-string-log-surface-gate)
-- [arm64e 不是多一个架构：iOS PAC/BTI 没验清楚，函数保护为什么必须 fail-closed？](https://dun.leonadev.com/article/ios-pac-bti-compatibility-fail-closed-gate)
-- [设备 ID 变了就换人吗？Android canonical identity 为什么必须由服务端归并？](https://dun.leonadev.com/article/android-canonical-device-id-stability-evidence)
-- [support bundle 不是日志打包：iOS 设备证据为什么要先脱敏再交付？](https://dun.leonadev.com/article/ios-support-bundle-redaction-diagnostic-boundary)
-- [SDK 能跑不代表能发布：Android 设备证据包为什么要证明“没有带出秘密”？](https://dun.leonadev.com/article/android-sdk-public-release-evidence-pack-no-secret-gate)
+这些页面承接 Security 2.1 脱敏测评事实，集中回答商业级 Android 加固、失败态 oracle、动态观测、二次打包闭合与 PoC 验收问题，避免继续新建同搜索意图页面。
+
+- [Android 加固 PoC 别只看能不能反编译：失败态 oracle 验收清单](https://dun.leonadev.com/article/android-hardening-poc-failure-oracle-checklist-security21)
+- [Android 加固到什么程度才算商业级：御盾 Security 2.1 签名入口实测与动态 oracle 收口](https://dun.leonadev.com/article/yudun-security21-android-commercial-hardening-oracle-gate)
+- [御盾 r338 Android 动态注入防护实测](https://dun.leonadev.com/article/yudun-r338-android-dynamic-injection-guard-evidence)
+- [御盾 r325 Android 二次打包防护证据链](https://dun.leonadev.com/article/yudun-r325-android-repack-failclosed-evidence-chain)
+- [App 加固 PoC 验收指南](https://dun.leonadev.com/article/app-hardening-poc-acceptance-guide)
 
 ## 相关站点
 
