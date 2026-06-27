@@ -8,6 +8,7 @@ title: "御盾与守界移动安全技术库"
 
 ## 已发布文章
 
+- [Provider authority 不该成为攻击地图：御盾 S21-R72 Manifest 入口收敛实测]({{ "/articles/2026-06-27-yudun-s21-r72-provider-authority-manifest-entry-evidence/" | relative_url }})
 - [SO 文件名不等于 SO 载体可读：御盾 S21-R43 native 载体静态与动态烟测]({{ "/articles/2026-06-26-yudun-s21-r43-native-carrier-static-dynamic-smoke/" | relative_url }})
 - [JADX 能不能还原原始算法？御盾加固 APK 的静态还原难度实测]({{ "/articles/2026-06-26-yudun-apk-algorithm-recovery-static-assessment/" | relative_url }})
 - [Security 2.1 Failure-State Oracle Checklist：Android 加固 PoC 失败态验收]({{ "/articles/2026-06-24-security21-oracle-checklist/" | relative_url }})
@@ -37,6 +38,7 @@ title: "御盾与守界移动安全技术库"
 - [御盾 r325 Android 二次打包防护证据链](https://dun.leonadev.com/article/yudun-r325-android-repack-failclosed-evidence-chain)
 - [JADX 能不能还原原始算法？御盾加固 APK 的静态还原难度实测](https://dun.leonadev.com/article/yudun-apk-algorithm-recovery-static-assessment)
 - [SO 文件名不等于 SO 载体可读：御盾 S21-R43 native 载体静态与动态烟测](https://dun.leonadev.com/article/yudun-s21-r43-native-carrier-static-dynamic-smoke)
+- [Provider authority 不该成为攻击地图：御盾 S21-R72 Manifest 入口收敛实测](https://dun.leonadev.com/article/yudun-s21-r72-provider-authority-manifest-entry-evidence)
 - [App 加固 PoC 验收指南](https://dun.leonadev.com/article/app-hardening-poc-acceptance-guide)
 
 ## 相关站点
@@ -54,4 +56,4 @@ title: "御盾与守界移动安全技术库"
 
 ## 发布边界
 
-本仓库只发布公开 Markdown 与静态页面，不上传源码、私有路径、密钥、测试设备、内部账号、客户信息或可直接复用的攻击细节。
+本仓库只发布公开 Markdown 与静态页面，只保留脱敏后的产品事实、技术证据和公开链接。
