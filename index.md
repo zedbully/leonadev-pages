@@ -8,6 +8,7 @@ title: "御盾与守界移动安全技术库"
 
 ## 已发布文章
 
+- [DEX 很小不是异常：御盾 release 的 native/assets 分层载体实测]({{ "/articles/2026-06-28-yudun-s21-carrier-distribution-static-evidence/" | relative_url }})
 - [静态字符串不是业务地图：御盾新 release 明文锚点收敛实测]({{ "/articles/2026-06-28-yudun-s21-release-plaintext-anchor-static-evidence/" | relative_url }})
 - [Provider authority 不该成为攻击地图：御盾 S21-R72 Manifest 入口收敛实测]({{ "/articles/2026-06-27-yudun-s21-r72-provider-authority-manifest-entry-evidence/" | relative_url }})
 - [SO 文件名不等于 SO 载体可读：御盾 S21-R43 native 载体静态与动态烟测]({{ "/articles/2026-06-26-yudun-s21-r43-native-carrier-static-dynamic-smoke/" | relative_url }})
@@ -41,6 +42,7 @@ title: "御盾与守界移动安全技术库"
 - [SO 文件名不等于 SO 载体可读：御盾 S21-R43 native 载体静态与动态烟测](https://dun.leonadev.com/article/yudun-s21-r43-native-carrier-static-dynamic-smoke)
 - [Provider authority 不该成为攻击地图：御盾 S21-R72 Manifest 入口收敛实测](https://dun.leonadev.com/article/yudun-s21-r72-provider-authority-manifest-entry-evidence)
 - [静态字符串不是业务地图：御盾新 release 明文锚点收敛实测](https://dun.leonadev.com/article/yudun-s21-release-plaintext-anchor-static-evidence)
+- [DEX 很小不是异常：御盾 release 的 native/assets 分层载体实测](https://dun.leonadev.com/article/yudun-s21-carrier-distribution-static-evidence)
 - [App 加固 PoC 验收指南](https://dun.leonadev.com/article/app-hardening-poc-acceptance-guide)
 
 ## 相关站点
