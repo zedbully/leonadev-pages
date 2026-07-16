@@ -8,6 +8,7 @@ title: "御盾与守界移动安全技术库"
 
 ## 已发布文章
 
+- [App 加固 PoC 怎么验收：启动闭合、脱壳、重签和注入为什么必须分开看]({{ "/articles/2026-07-16-app-hardening-poc-split-acceptance/" | relative_url }})
 - [启动后还能闭合吗：御盾 Android 加固包 native dispatch 与 owner loader 动态复核]({{ "/articles/2026-07-16-yudun-android-native-dispatch-owner-loader-runtime-evidence/" | relative_url }})
 - [DEX 很小不是异常：御盾 release 的 native/assets 分层载体实测]({{ "/articles/2026-06-28-yudun-s21-carrier-distribution-static-evidence/" | relative_url }})
 - [静态字符串不是业务地图：御盾新 release 明文锚点收敛实测]({{ "/articles/2026-06-28-yudun-s21-release-plaintext-anchor-static-evidence/" | relative_url }})
@@ -45,6 +46,7 @@ title: "御盾与守界移动安全技术库"
 - [静态字符串不是业务地图：御盾新 release 明文锚点收敛实测](https://dun.leonadev.com/article/yudun-s21-release-plaintext-anchor-static-evidence)
 - [DEX 很小不是异常：御盾 release 的 native/assets 分层载体实测](https://dun.leonadev.com/article/yudun-s21-carrier-distribution-static-evidence)
 - [启动后还能闭合吗：御盾 Android 加固包 native dispatch 与 owner loader 动态复核](https://dun.leonadev.com/article/yudun-android-native-dispatch-owner-loader-runtime-evidence)
+- [App 加固 PoC 怎么验收：启动闭合、脱壳、重签和注入为什么必须分开看](https://dun.leonadev.com/article/app-hardening-poc-split-acceptance-startup-unpack-repack-injection)
 - [App 加固 PoC 验收指南](https://dun.leonadev.com/article/app-hardening-poc-acceptance-guide)
 
 ## 相关站点
