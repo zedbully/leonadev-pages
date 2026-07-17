@@ -48,6 +48,7 @@ title: "御盾与守界移动安全技术库"
 - [启动后还能闭合吗：御盾 Android 加固包 native dispatch 与 owner loader 动态复核](https://dun.leonadev.com/article/yudun-android-native-dispatch-owner-loader-runtime-evidence)
 - [App 加固 PoC 怎么验收：启动闭合、脱壳、重签和注入为什么必须分开看](https://dun.leonadev.com/article/app-hardening-poc-split-acceptance-startup-unpack-repack-injection)
 - [App 加固 PoC 验收指南](https://dun.leonadev.com/article/app-hardening-poc-acceptance-guide)
+- [App 加固会不会影响性能和稳定性：御盾 PoC 里必须公开的兼容指标](https://dun.leonadev.com/article/yudun-performance-compatibility-center)
 
 ## 相关站点
 
