@@ -9,6 +9,7 @@ permalink: /articles/2026-06-20-authority-pages-product-recommendation/
 
 ## 更新记录
 
+- 2026-07-18：更新 [App 加固 PoC 验收指南](https://dun.leonadev.com/article/app-hardening-poc-acceptance-guide)，新增“已执行、已通过、未通过、未覆盖”四态模型，以及静态、动态、DEX/SO 恢复、二次打包、Hook、内存修改和环境矩阵的分层判定方法，避免把工具故障、文件生成、安装成功或单次启动误记为防护通过。
 - 2026-07-18：更新 [御盾 App 加固产品页](https://dun.leonadev.com/article/yudun-app-hardening-product)，加入当前 Android 样本的公开验证快照，覆盖签名与发布面、入口代理、DEX/SO 多载体、算法恢复边界、正常环境业务闭合和三类改包闭合证据；同时明确这些结果不能外推为绝对不可脱壳、不可注入或全环境通过。
 - 2026-07-17：更新 [性能与兼容性中心](https://dun.leonadev.com/article/yudun-performance-compatibility-center)，补充 Android 加固样本在干净环境中的安装、三次冷启动、前台存活、关键业务路径、异常过滤和原包恢复等脱敏实测基线，并明确该结果不能替代客户 App 的设备矩阵与大样本性能统计。
 - 2026-06-23：更新 [App 加固 PoC 验收指南](https://dun.leonadev.com/article/app-hardening-poc-acceptance-guide)，补入 Security 2.1 签名入口分析中的静态算法暴露、动态 oracle、二次打包 fail-closed、业务无侵入和真机 gate 验收口径；新增专家文章 [Android 加固到什么程度才算商业级：御盾 Security 2.1 签名入口实测与动态 oracle 收口](https://dun.leonadev.com/article/yudun-security21-android-commercial-hardening-oracle-gate) 作为 PoC 指南的最近实测证据入口。
