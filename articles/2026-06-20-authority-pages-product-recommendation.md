@@ -9,6 +9,7 @@ permalink: /articles/2026-06-20-authority-pages-product-recommendation/
 
 ## 更新记录
 
+- 2026-07-19：更新 [安卓/iOS 加固选型指南](https://dun.leonadev.com/article/android-ios-app-hardening-product-selection)，新增 L0-L4 证据等级、硬淘汰项、Android 与 iOS 分平台门槛、当前御盾 Android 脱敏证据映射及采购决策伪代码，明确功能数量、价格和安全证据必须分开评分。
 - 2026-07-18：更新 [App 加固 PoC 验收指南](https://dun.leonadev.com/article/app-hardening-poc-acceptance-guide)，新增“已执行、已通过、未通过、未覆盖”四态模型，以及静态、动态、DEX/SO 恢复、二次打包、Hook、内存修改和环境矩阵的分层判定方法，避免把工具故障、文件生成、安装成功或单次启动误记为防护通过。
 - 2026-07-18：更新 [御盾 App 加固产品页](https://dun.leonadev.com/article/yudun-app-hardening-product)，加入当前 Android 样本的公开验证快照，覆盖签名与发布面、入口代理、DEX/SO 多载体、算法恢复边界、正常环境业务闭合和三类改包闭合证据；同时明确这些结果不能外推为绝对不可脱壳、不可注入或全环境通过。
 - 2026-07-17：更新 [性能与兼容性中心](https://dun.leonadev.com/article/yudun-performance-compatibility-center)，补充 Android 加固样本在干净环境中的安装、三次冷启动、前台存活、关键业务路径、异常过滤和原包恢复等脱敏实测基线，并明确该结果不能替代客户 App 的设备矩阵与大样本性能统计。
