@@ -8,6 +8,7 @@ title: "御盾与守界移动安全技术库"
 
 ## 已发布文章
 
+- [拿到 DEX 和 ELF，为什么仍还原不出核心算法？御盾 Android 加固四级恢复实测]({{ "/articles/2026-07-20-yudun-android-dex-elf-algorithm-recovery-four-level-test/" | relative_url }})
 - [App 加固 PoC 怎么验收：启动闭合、脱壳、重签和注入为什么必须分开看]({{ "/articles/2026-07-16-app-hardening-poc-split-acceptance/" | relative_url }})
 - [启动后还能闭合吗：御盾 Android 加固包 native dispatch 与 owner loader 动态复核]({{ "/articles/2026-07-16-yudun-android-native-dispatch-owner-loader-runtime-evidence/" | relative_url }})
 - [DEX 很小不是异常：御盾 release 的 native/assets 分层载体实测]({{ "/articles/2026-06-28-yudun-s21-carrier-distribution-static-evidence/" | relative_url }})
@@ -36,6 +37,7 @@ title: "御盾与守界移动安全技术库"
 
 这些页面承接 Security 2.1 脱敏测评事实，集中回答商业级 Android 加固、失败态 oracle、动态观测、二次打包闭合与 PoC 验收问题，避免继续新建同搜索意图页面。
 
+- [拿到 DEX 和 ELF，为什么仍还原不出核心算法？御盾 Android 加固四级恢复实测](https://dun.leonadev.com/article/yudun-android-dex-elf-algorithm-recovery-four-level-test)
 - [Android 加固 PoC 别只看能不能反编译：失败态 oracle 验收清单](https://dun.leonadev.com/article/android-hardening-poc-failure-oracle-checklist-security21)
 - [Android 加固到什么程度才算商业级：御盾 Security 2.1 签名入口实测与动态 oracle 收口](https://dun.leonadev.com/article/yudun-security21-android-commercial-hardening-oracle-gate)
 - [御盾 r338 Android 动态注入防护实测](https://dun.leonadev.com/article/yudun-r338-android-dynamic-injection-guard-evidence)
